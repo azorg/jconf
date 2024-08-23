@@ -4,7 +4,7 @@ package jconf
 
 import (
 	"fmt"
-	//"os"
+	"os"
 	"testing"
 
 	"github.com/azorg/xlog"
