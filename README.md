@@ -1,8 +1,9 @@
-jconf - simple Go package to read/write JSON config file
-========================================================
+jconf - simple Go package to read/write JSON/YAML config file
+=============================================================
 
 ## Functions
-- `Read()` - read JSON config file
-- `Write()` - write JSON config file
-- `Show()` - show JSON config structure to stdout
+- `Write()` - write JSON/YAML config file
+- `Read()` - read JSON/YAML config file
+- `Show()` - show structure to stdout as JSON
+- `ShowYAML()` - show structure to stdout as YAML
 

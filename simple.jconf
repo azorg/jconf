@@ -1,0 +1,22 @@
+{
+  "url": "https://host.name:8443",
+  "port": 6666,
+  "log": {
+    "file": "stdout",
+    "file-mode": "0640",
+    "level": "info",
+    "slog": false,
+    "json": false,
+    "tint": false,
+    "time": false,
+    "time-us": false,
+    "time-tint": "",
+    "src": false,
+    "src-long": false,
+    "no-level": false,
+    "no-color": false,
+    "preifix": "",
+    "add-key": "",
+    "add-value": ""
+  }
+}

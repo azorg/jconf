@@ -3,7 +3,8 @@
 package jconf
 
 import (
-	"os"
+	"fmt"
+	//"os"
 	"testing"
 
 	"github.com/azorg/xlog"
@@ -28,9 +29,10 @@ type Conf struct {
 	Log  xlog.Conf `json:"log"`  // logger settings
 }
 
-const CONF_FILE_NAME = "simple.jconf"
+const JSON_CONF_FILE_NAME = "simple.jconf"
+const YAML_CONF_FILE_NAME = "simple.yaml"
 
-// Show config
+// Show JSON/YAML config
 func Test_Show(t *testing.T) {
 	conf := &Conf{
 		URL:  "prot://host.name:PORT",
@@ -38,11 +40,16 @@ func Test_Show(t *testing.T) {
 		Log:  xlog.NewConf(),
 	}
 
+	fmt.Println("JSON:")
 	err := Show(conf)
 	require.NoError(t, err, "Show() fail")
+
+	fmt.Println("YAML:")
+	err = ShowYAML(conf)
+	require.NoError(t, err, "ShowYAML() fail")
 }
 
-// Write config
+// Write config (JSON+YAML)
 func Test_Write(t *testing.T) {
 	conf := &Conf{
 		URL:  "https://host.name:8443",
@@ -50,22 +57,34 @@ func Test_Write(t *testing.T) {
 		Log:  xlog.NewConf(),
 	}
 
-	err := Write(conf, CONF_FILE_NAME)
-	require.NoError(t, err, "Write() fail")
+	err := Write(conf, JSON_CONF_FILE_NAME)
+	require.NoError(t, err, "Write() JSON fail")
+
+	err = Write(conf, YAML_CONF_FILE_NAME)
+	require.NoError(t, err, "Write() YAML fail")
 }
 
-// Read and show config
+// Read and show config (JSON+YAML)
 func Test_Read(t *testing.T) {
 	conf := &Conf{}
 
-	err := Read(conf, CONF_FILE_NAME)
-	require.NoError(t, err, "Read() fail")
+	err := Read(conf, JSON_CONF_FILE_NAME)
+	require.NoError(t, err, "Read() JSON fail")
 
 	err = Show(conf)
-	require.NoError(t, err, "Show() fail")
+	require.NoError(t, err, "Show() JSON fail")
 
-	err = os.Remove(CONF_FILE_NAME)
-	require.NoError(t, err, "os.Remove() fail")
+	err = os.Remove(JSON_CONF_FILE_NAME)
+	require.NoError(t, err, "os.Remove() JSON fail")
+
+	err = Read(conf, YAML_CONF_FILE_NAME)
+	require.NoError(t, err, "Read() YAML fail")
+
+	err = ShowYAML(conf)
+	require.NoError(t, err, "Show() YAML fail")
+
+	err = os.Remove(YAML_CONF_FILE_NAME)
+	require.NoError(t, err, "os.Remove() YAML fail")
 }
 
 // EOF: "jconf_test.go"

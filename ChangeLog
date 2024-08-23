@@ -1,2 +1,5 @@
+2024.08.23:
+ * add YAML support (based on "sigs.k8s.io/yaml")
+
 2024.02.03:
  * initial commit

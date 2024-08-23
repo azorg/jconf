@@ -1,0 +1,19 @@
+log:
+  add-key: ""
+  add-value: ""
+  file: stdout
+  file-mode: "0640"
+  json: false
+  level: info
+  no-color: false
+  no-level: false
+  preifix: ""
+  slog: false
+  src: false
+  src-long: false
+  time: false
+  time-tint: ""
+  time-us: false
+  tint: false
+port: 6666
+url: https://host.name:8443
