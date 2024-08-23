@@ -7,8 +7,11 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strings"
 
 	"github.com/azorg/xlog"
+	//"github.com/ghodss/yaml"
+	"github.com/itchyny/json2yaml"
 	"sigs.k8s.io/yaml"
 )
 
@@ -21,6 +24,25 @@ func IsYAML(fileName string) bool {
 		}
 	}
 	return false
+}
+
+// Marshal YAML
+func ToYAML(conf any) (string, error) {
+	data, err := json.Marshal(conf)
+	if err != nil {
+		return "", err
+	}
+
+	// Convert JSON to YAML
+	// (preserves the order of mapping keys!)
+	input := strings.NewReader(string(data))
+	var output strings.Builder
+	err = json2yaml.Convert(&output, input)
+	if err != nil {
+		return "", err
+	}
+
+	return output.String(), nil
 }
 
 // Write JSON/YAML config file
@@ -55,13 +77,13 @@ func Write(conf any, fileName string) error {
 
 	if IsYAML(fileName) {
 		// Save as YAML
-		data, err := yaml.Marshal(conf)
+		str, err := ToYAML(conf)
 		if err != nil {
 			xlog.Error("can't marshal YAML", "err", err)
 			return err
 		}
 
-		_, err = file.Write(data)
+		_, err = file.Write([]byte(str))
 		if err != nil {
 			xlog.Error("can't write to YAML file",
 				"err", err, "fileName", fileName)
@@ -121,7 +143,6 @@ func Read(conf any, fileName string) error {
 		}
 	}()
 
-	// Read as JSON
 	dec := json.NewDecoder(file)
 	if err = dec.Decode(conf); err != nil {
 		xlog.Fatal("can't decode JSON config",
@@ -144,12 +165,12 @@ func Show(conf any) error {
 
 // Show structure to stdout as YAML
 func ShowYAML(conf any) error {
-	data, err := yaml.Marshal(conf)
+	str, err := ToYAML(conf)
 	if err != nil {
-		xlog.Error("can't marshal YAML", "err", err)
+		xlog.Crit("can't marshal JSON", "err", err)
 		return err
 	}
-	fmt.Print(string(data))
+	fmt.Print(str)
 	return nil
 }
 

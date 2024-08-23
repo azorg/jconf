@@ -1,14 +1,12 @@
-github.com/azorg/xlog v0.2.6 h1:Kgt0+gCymZCc1T2oDZrpDTl0lyHe8ZTNdbfOAuPl2n0=
-github.com/azorg/xlog v0.2.6/go.mod h1:66/EuC7LhcN7OQGpIi+P07BLxNOb4K3mkje9sgNnXpk=
 github.com/azorg/xlog v1.0.3 h1:5Pp/cw14IOGCER1Ho7A/BjsAlswQq4be5SCNlR2/RP8=
 github.com/azorg/xlog v1.0.3/go.mod h1:66/EuC7LhcN7OQGpIi+P07BLxNOb4K3mkje9sgNnXpk=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/google/go-cmp v0.5.9/go.mod h1:17dUlkBOakJ0+DkrSSNjCkIjxS6bF9zb3elmeNGIjoY=
+github.com/itchyny/json2yaml v0.1.4 h1:/pErVOXGG5iTyXHi/QKR4y3uzhLjGTEmmJIy97YT+k8=
+github.com/itchyny/json2yaml v0.1.4/go.mod h1:6iudhBZdarpjLFRNj+clWLAkGft+9uCcjAZYXUH9eGI=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
-github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/stretchr/testify v1.9.0 h1:HtqpIVDClZ4nwg75+f6Lvsy/wHu+3BoSGCbBAcpTsTg=
 github.com/stretchr/testify v1.9.0/go.mod h1:r2ic/lqez/lEtzL7wO/rwa5dbSLXVDPFyf8C91i36aY=
 gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
