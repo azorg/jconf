@@ -1,3 +1,6 @@
+2024.10.07:
+ * build for go1.20
+
 2024.08.23:
  * add YAML support (based on "sigs.k8s.io/yaml")
  * add "github.com/itchyny/json2yaml" for preserves the
