@@ -1,3 +1,7 @@
+2025.01.04:
+ * genetrate doc.txt/doc.md
+ * switch to go1.22 again
+
 2024.10.07:
  * build for go1.20
 

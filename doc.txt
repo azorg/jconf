@@ -1,0 +1,49 @@
+package jconf // import "github.com/azorg/jconf"
+
+jconf - simple Go package to read/write JSON config file
+
+Functions:
+
+    Read() - read JSON config file
+
+    Write() - write JSON config file
+
+    Show() - show JSON config structure to stdout
+
+CONSTANTS
+
+const FILE_MODE = 0640
+    Default config file mode
+
+
+VARIABLES
+
+var YAML_EXTS = []string{
+	".yaml", ".YAML",
+	".yml", ".YML",
+	".yconf", ".YCONF",
+	".yml.conf", ".YML.CONF",
+}
+    YAML config file extensions (suffixes)
+
+
+FUNCTIONS
+
+func IsYAML(fileName string) bool
+    Check file name is YAML
+
+func Read(conf any, fileName string) error
+    Read JSON config file
+
+func Show(conf any) error
+    Show structure to stdout as JSON
+
+func ShowYAML(conf any) error
+    Show structure to stdout as YAML
+
+func ToYAML(conf any) (string, error)
+    Marshal YAML
+
+func Write(conf any, fileName string) error
+    Write JSON/YAML config file
+
