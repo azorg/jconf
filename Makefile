@@ -43,13 +43,13 @@ tidy: go.mod
 	@go mod tidy
 
 go.sum: go.mod Makefile #tidy
-	@#go get golang.org/x/exp/slog # experimental slog (go <1.21)
-	@#go get github.com/azorg/xlog@go1.20
-	@go get github.com/azorg/xlog
-	@go get sigs.k8s.io/yaml
-	@#go get github.com/ghodss/yaml
-	@go get github.com/itchyny/json2yaml
-	@go get github.com/stretchr/testify/require
+	@#go get -u golang.org/x/exp/slog # experimental slog (go <1.21)
+	@#go get -u github.com/azorg/xlog@go1.20
+	@go get -u github.com/azorg/xlog
+	@go get -u sigs.k8s.io/yaml
+	@#go get -u github.com/ghodss/yaml
+	@go get -u github.com/itchyny/json2yaml
+	@go get -u github.com/stretchr/testify/require
 	@touch go.sum
 
 vendor: go.sum

@@ -14,8 +14,8 @@ import (
 func init() {
 	// Setup logger
 	conf := xlog.Conf{
-		Level: "flood", Src: true, //SrcLong: true,
-		Tint: true, TimeTint: "15:04:05.999",
+		Level: "flood", Src: true, SrcPkg: true,
+		Format: "tint", TimeFormat: "15:04:05.999",
 	}
 	xlog.Env(&conf)
 	xlog.Setup(conf)
@@ -37,7 +37,7 @@ func Test_Show(t *testing.T) {
 	conf := &Conf{
 		URL:  "prot://host.name:PORT",
 		Port: 7777,
-		Log:  xlog.NewConf(),
+		Log:  xlog.Conf{},
 	}
 
 	fmt.Println("JSON:")
@@ -54,7 +54,7 @@ func Test_Write(t *testing.T) {
 	conf := &Conf{
 		URL:  "https://host.name:8443",
 		Port: 6666,
-		Log:  xlog.NewConf(),
+		Log:  xlog.Conf{},
 	}
 
 	err := Write(conf, JSON_CONF_FILE_NAME)

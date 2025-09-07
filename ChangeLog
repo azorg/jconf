@@ -1,3 +1,6 @@
+2025.09.07:
+ * update xlog to v2.x.x
+
 2025.01.04:
  * genetrate doc.txt/doc.md
  * switch to go1.22 again
