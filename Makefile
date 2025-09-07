@@ -45,7 +45,7 @@ tidy: go.mod
 go.sum: go.mod Makefile #tidy
 	@#go get -u golang.org/x/exp/slog # experimental slog (go <1.21)
 	@#go get -u github.com/azorg/xlog@go1.20
-	@go get -u github.com/azorg/xlog
+	@go get -u github.com/azorg/xlog@main
 	@go get -u sigs.k8s.io/yaml
 	@#go get -u github.com/ghodss/yaml
 	@go get -u github.com/itchyny/json2yaml

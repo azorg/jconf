@@ -3,7 +3,7 @@ module github.com/azorg/jconf
 go 1.23.8
 
 require (
-	github.com/azorg/xlog v1.4.8-0.20250907091407-afca6da1d783 // indirect
+	github.com/azorg/xlog v1.4.8-0.20250907085405-f02e43ecfde0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/gofrs/uuid v4.4.0+incompatible // indirect
 	github.com/itchyny/json2yaml v0.1.4 // indirect

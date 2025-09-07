@@ -1,5 +1,5 @@
-github.com/azorg/xlog v1.4.8-0.20250907091407-afca6da1d783 h1:fatDoTwOVcwBWlLxyO0Ph8JfFhiWyAnCvwf8ANHHunw=
-github.com/azorg/xlog v1.4.8-0.20250907091407-afca6da1d783/go.mod h1:4zJ1BeuTkAm5KcAov4OqMaFhjxT1UthiqOSeG9bWw5w=
+github.com/azorg/xlog v1.4.8-0.20250907085405-f02e43ecfde0 h1:42QITamAew/wbEwVny7vidh2dDZZPCvJ9pzwy9XKNpo=
+github.com/azorg/xlog v1.4.8-0.20250907085405-f02e43ecfde0/go.mod h1:4zJ1BeuTkAm5KcAov4OqMaFhjxT1UthiqOSeG9bWw5w=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/gofrs/uuid v4.4.0+incompatible h1:3qXRTX8/NbyulANqlc0lchS1gqAVxRgsuW1YrTJupqA=
